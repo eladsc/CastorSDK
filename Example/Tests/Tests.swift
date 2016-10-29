@@ -31,7 +31,7 @@ class TableOfContentsSpec: QuickSpec {
                 }
 
                 it("will eventually pass") {
-                    var time = "passing"
+                    let time = "passing"
 
 //                    dispatch_async(dispatch_get_main_queue()) {
 //                        time = "done"
