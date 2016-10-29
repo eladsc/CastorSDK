@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J5R-xF-ST0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Store View Controller-->
+        <scene sceneID="hO3-Jb-2g6">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J5R-xF-ST0" customClass="StoreViewController" customModule="CastorSDK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1EM-zv-O5l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Se6-ZL-4Qa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84H-9y-3KD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-ND-QNC">
+                                <state key="normal" image="x">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="xPressed:" destination="J5R-xF-ST0" eventType="touchUpInside" id="sjD-Cu-rLX"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajv-Mk-p9c">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="J5R-xF-ST0" id="N6W-PB-7ez"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zfl-ND-QNC" firstAttribute="top" secondItem="1EM-zv-O5l" secondAttribute="bottom" constant="8" id="4vO-yO-tGk"/>
+                            <constraint firstItem="ajv-Mk-p9c" firstAttribute="top" secondItem="84H-9y-3KD" secondAttribute="top" id="Aey-7V-qi8"/>
+                            <constraint firstItem="Zfl-ND-QNC" firstAttribute="trailing" secondItem="84H-9y-3KD" secondAttribute="trailingMargin" id="Hlt-95-IYG"/>
+                            <constraint firstItem="ajv-Mk-p9c" firstAttribute="leading" secondItem="84H-9y-3KD" secondAttribute="leading" id="I1w-s2-r5j"/>
+                            <constraint firstAttribute="trailing" secondItem="ajv-Mk-p9c" secondAttribute="trailing" id="bch-rZ-950"/>
+                            <constraint firstItem="Se6-ZL-4Qa" firstAttribute="top" secondItem="ajv-Mk-p9c" secondAttribute="bottom" id="y3Z-ey-Tr8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="ajv-Mk-p9c" id="ptm-dd-gFK"/>
+                        <outlet property="xBut" destination="Zfl-ND-QNC" id="YgJ-Ge-YTu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pey-w0-J9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="171.36431784107947"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="x" width="44" height="44"/>
+    </resources>
+</document>

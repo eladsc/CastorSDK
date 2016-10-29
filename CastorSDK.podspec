@@ -17,24 +17,21 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/CastorSDK'
+  s.description      = 'README.md'
+  s.homepage         = 'https://github.com/eladsc/CastorSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'elad schiller' => 'eladsc@mycheck.co.il' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/CastorSDK.git', :tag => s.version.to_s }
+  s.author           = { 'elad schiller' => 'eladsc@gmail.com' }
+  s.source           = { :git => 'https://github.com/eladsc/CastorSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CastorSDK/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'CastorSDK' => ['CastorSDK/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'CastorSDK' => ['CastorSDK/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CastorSDK_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ylh-tz-ZN1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductTableViewCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="HIz-kC-wOn" customClass="ProductTableViewCell" customModule="CastorSDK_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HIz-kC-wOn" id="dxw-d4-vPu">
+                                            <frame key="frameInset" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-ra-gGy">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr7-FW-Yjb">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GdJ-ra-gGy" firstAttribute="centerY" secondItem="dxw-d4-vPu" secondAttribute="centerY" id="4Qb-6K-GPp"/>
+                                                <constraint firstItem="lr7-FW-Yjb" firstAttribute="trailing" secondItem="dxw-d4-vPu" secondAttribute="trailingMargin" id="BFd-Yb-VEE"/>
+                                                <constraint firstItem="GdJ-ra-gGy" firstAttribute="leading" secondItem="dxw-d4-vPu" secondAttribute="leadingMargin" id="CIZ-pB-15x"/>
+                                                <constraint firstItem="lr7-FW-Yjb" firstAttribute="centerY" secondItem="dxw-d4-vPu" secondAttribute="centerY" id="Efs-6k-wQe"/>
+                                                <constraint firstItem="lr7-FW-Yjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GdJ-ra-gGy" secondAttribute="trailing" constant="15" id="j8a-Fc-WBi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="idLabel" destination="lr7-FW-Yjb" id="hjG-Y3-mKH"/>
+                                            <outlet property="nameLabel" destination="GdJ-ra-gGy" id="5bL-31-ta0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ZxT-nn-eK6"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="B6L-YM-ObU"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Castor SDK example app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-G1-F1S">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CbA-G1-F1S" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="PVz-nH-MLL"/>
+                            <constraint firstItem="CbA-G1-F1S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="hgz-rI-id9"/>
+                            <constraint firstItem="Ylh-tz-ZN1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iJp-at-ePE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ylh-tz-ZN1" secondAttribute="trailing" id="quk-8e-3oO"/>
+                            <constraint firstItem="Ylh-tz-ZN1" firstAttribute="top" secondItem="CbA-G1-F1S" secondAttribute="bottom" constant="8" id="uQh-jV-rdT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ylh-tz-ZN1" secondAttribute="bottom" id="x65-Gp-HhT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="Ylh-tz-ZN1" id="oJI-nX-2kK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
