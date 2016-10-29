@@ -1,6 +1,5 @@
 # CastorSDK
 
-[![CI Status](http://img.shields.io/travis/elad schiller/CastorSDK.svg?style=flat)](https://travis-ci.org/elad schiller/CastorSDK)
 [![Version](https://img.shields.io/cocoapods/v/CastorSDK.svg?style=flat)](http://cocoapods.org/pods/CastorSDK)
 [![License](https://img.shields.io/cocoapods/l/CastorSDK.svg?style=flat)](http://cocoapods.org/pods/CastorSDK)
 [![Platform](https://img.shields.io/cocoapods/p/CastorSDK.svg?style=flat)](http://cocoapods.org/pods/CastorSDK)
