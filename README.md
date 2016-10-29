@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/CastorSDK.svg?style=flat)](http://cocoapods.org/pods/CastorSDK)
 [![Platform](https://img.shields.io/cocoapods/p/CastorSDK.svg?style=flat)](http://cocoapods.org/pods/CastorSDK)
 
-CastorSDK is a SDK that allows you to sell 3D printed models directly from your app. Just display the StoreViewController to the user with the item you would like to sell and the Castor SDK will take care of the rest: from sail , through printing to final shipping and delivery of the item to the client's home.
+CastorSDK is a SDK that allows you to sell 3D printed models directly from your app. Just display the StoreViewController to the user with the item you would like to sell and the Castor SDK will take care of the rest: from sale , through printing to final shipping and delivery of the item to the client's home.
 
 Before integrating the SDK, please contact me in order to catalog the models you are interested in selling in your app. Once we are done we will supply you with an API key that will setup the SDK to be a storefront for your 3D models.
 
