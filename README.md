@@ -26,6 +26,20 @@ it, simply add the following line to your Podfile:
 pod "CastorSDK"
 ```
 ## Use
+First you must allow arbitrary loads for our domain. This is in order to allow the Wix store  to load. Wix deploys SSL only once the checkout flow commences. Simply add the following keys to your info.plist
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>3dcastor.wixsite.com</key>
+    <string></string>
+  </dict>
+</dict>
+```
 
 `import CastorSDK` into your AppDelegate. Inside your `didFinishLaunchingWithOptions` function call the configure function of the Castor singleton in order to setup the SDK:
 
