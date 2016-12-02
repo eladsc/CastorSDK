@@ -1,5 +1,5 @@
 PODS:
-  - CastorSDK (0.1.0)
+  - CastorSDK (0.0.2)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CastorSDK: ca804b02a3cc4d5eb1e53389a12eaf724622f5b4
+  CastorSDK: 7e02f9b14bc0b0220d44db839dc6fce49c4004af
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 5ea121a2eda60440287054cde077fc0ad22227b3
   Nimble-Snapshots: 4ba722c35b73a680cbd856e4bc22076dfb8085d4
@@ -34,4 +34,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0b6a289bd96be98cb369f7be584305b1372763c1
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1

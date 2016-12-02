@@ -62,7 +62,8 @@ public class StoreViewController : UIViewController{
     self.webview.loadRequest(request)
   }
   //MARK: - actions
-  @IBAction private func xPressed(sender: AnyObject) {
+
+  @IBAction func xPressed(_ sender: Any) {
     delegate!.complete(viewController: self, status: .Canceled)
   }
   
