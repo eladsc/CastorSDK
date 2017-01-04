@@ -8,7 +8,7 @@
 
 import UIKit
 ///An object reprisenting a 3D model available for sale on the Castor store.
-public class Product {
+@objc public class Product : NSObject{
 ///The unique identifier of the model
   public let id : String
   ///The name of the model

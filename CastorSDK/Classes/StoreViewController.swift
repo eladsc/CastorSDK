@@ -1,7 +1,7 @@
 import UIKit
 
 ///The reason the StoreViewControllerDelegate is being dismissed
-public enum CompletionStatus{
+@objc public enum CompletionStatus : Int{
   ///Canced by the user.
   case Canceled
   /// The sail Succeeded
@@ -11,7 +11,7 @@ public enum CompletionStatus{
 }
 
 ///A delegate that adopts this protocol will get updates on changes in the StoreViewController object.
-public protocol StoreViewControllerDelegate{
+@objc public protocol StoreViewControllerDelegate {
   ///Updates the user when the view controller complete and must be dismissed.
   ///
   ///    - parameter viewController: the View Controller that has complete and must be dismissed.
@@ -26,7 +26,7 @@ public protocol StoreViewControllerDelegate{
 
 
 ///StoreViewController displays the store UI for the particular Product you have initialise it with. The class, when displied to the user will take care of the sale and call the delegate method when it is done.
-public class StoreViewController : UIViewController{
+@objc public class StoreViewController : UIViewController{
   
   ///Recieves updates on changes in StoreViewController
   public var delegate : StoreViewControllerDelegate?

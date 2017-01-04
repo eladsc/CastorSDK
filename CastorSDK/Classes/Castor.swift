@@ -8,7 +8,7 @@
 
 import UIKit
 ///This object is a singlton that manages the Castor Store.
-public class Castor {
+@objc public class Castor : NSObject{
 ///The singlton instance you should use for all actions.
  public static let manager = Castor()
   
