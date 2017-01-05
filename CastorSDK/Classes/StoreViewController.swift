@@ -16,7 +16,7 @@ import UIKit
   ///
   ///    - parameter viewController: the View Controller that has complete and must be dismissed.
   ///    - parameter status: the reason the view controller was dismissed.
-  func complete( viewController: StoreViewController , status: CompletionStatus)
+ @objc func complete( viewController: StoreViewController , status: CompletionStatus)
   
 }
 
