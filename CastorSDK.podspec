@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CastorSDK'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'CastorSDK is a SDK that allows you to sell 3D printed models directly from your app.'
 
 # This description is used to generate tags and improve search results.
